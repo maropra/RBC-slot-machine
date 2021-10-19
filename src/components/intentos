@@ -1,0 +1,48 @@
+// generateResult = () => {
+//   let randomNumber = Math.floor(Math.random() * (4 - 1)) + 1;
+//   if (randomNumber === 1) {
+//     this.setState({ slot: '🍕' })
+//   } else if (randomNumber === 2) {
+//     this.setState({ slot: '🍔' })
+//   } else {
+//     this.setState({ slot: '🍟' })
+//   }
+// }
+
+getRandom = () => {
+    let arr = [];
+    while (arr.length < 3) {
+        var r = Math.floor(Math.random() * (4 - 1) + 1);
+        if (arr.indexOf(r) === -1) {
+            arr.push(r);
+        }
+        return arr;
+    }
+    //devuelve un array con 3 numero al azar
+
+    gerenateRandomIcons = () => {
+        results = this.getRandom().map(num => {
+            if (num === 1) {
+                num = '🍕'
+            } else if (num === 2) {
+                num = '🍔'
+            } else {
+                num = '🍟'
+            }
+        })
+        return results
+    }
+  //Devuelve un array con 3 figuritas
+
+   // generateResult = () => {
+  //   let randomNumber = Math.floor(Math.random() * (4 - 1)) + 1;
+  //   let slot = '';
+  //   if (randomNumber == 1) {
+  //     slot = '🍕';
+  //   } else if (randomNumber == 2) {
+  //     slot = '🍔';
+  //   } else {
+  //     slot = '🍟';
+  //   }
+  //   return slot;
+  // }
